@@ -1,0 +1,45 @@
+{
+    "evaluation_stage": "20.16",
+    "evaluation_name": "Optimization Decision",
+    "input_stage": "20.15",
+    "summary": {
+        "total_experiments": 3,
+        "optimize": 0,
+        "keep": 0,
+        "investigate": 3,
+        "source_supported": 0,
+        "source_rejected": 2,
+        "source_inconclusive": 0,
+        "source_not_experimentable": 1,
+        "runtime_modified": false
+    },
+    "decisions": [
+        {
+            "experiment_id": "E001",
+            "hypothesis_id": "H001",
+            "experiment_result": "rejected",
+            "experimentability": "controllable",
+            "decision": "investigate",
+            "reason": "实验结果未支持原假设。需要进一步检查样本量、干预是否生效以及实验是否具备区分不同配置的能力。",
+            "runtime_modified": false
+        },
+        {
+            "experiment_id": "E002",
+            "hypothesis_id": "H002",
+            "experiment_result": "rejected",
+            "experimentability": "controllable",
+            "decision": "investigate",
+            "reason": "实验结果未支持原假设。需要进一步检查样本量、干预是否生效以及实验是否具备区分不同配置的能力。",
+            "runtime_modified": false
+        },
+        {
+            "experiment_id": "E003",
+            "hypothesis_id": "H003",
+            "experiment_result": "not_experimentable",
+            "experimentability": "not_directly_controllable",
+            "decision": "investigate",
+            "reason": "当前实验无法直接控制对应变量，需要重新设计可验证的实验方案。",
+            "runtime_modified": false
+        }
+    ]
+}

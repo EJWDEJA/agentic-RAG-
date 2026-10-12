@@ -1,0 +1,55 @@
+{
+  "evaluation_stage": "20.12",
+  "evaluation_name": "Hypothesis Management",
+  "summary": {
+    "total_hypotheses": 3,
+    "formal_candidates": 0,
+    "exploratory_candidates": 3
+  },
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "failure_type": "grounding_failure",
+      "dimension": "retrieval_count",
+      "condition": "retrieval_count == 1",
+      "observation": "2 个 grounding_failure 案例中，2 个案例的 retrieval_count = 1，占该失败类型样本的 100%。",
+      "hypothesis": "retrieval_count = 1 可能与 grounding_failure 的发生存在关联。",
+      "pattern_detected": false,
+      "sample_size": 2,
+      "pattern_rate": 1.0,
+      "evidence_strength": "weak",
+      "status": "unverified"
+    },
+    {
+      "hypothesis_id": "H002",
+      "failure_type": "grounding_failure",
+      "dimension": "repair_count",
+      "condition": "repair_count == 0",
+      "observation": "2 个 grounding_failure 案例中，2 个案例的 repair_count = 0，占该失败类型样本的 100%。",
+      "hypothesis": "repair_count = 0 可能与 grounding_failure 的发生存在关联。",
+      "pattern_detected": false,
+      "sample_size": 2,
+      "pattern_rate": 1.0,
+      "evidence_strength": "weak",
+      "status": "unverified"
+    },
+    {
+      "hypothesis_id": "H003",
+      "failure_type": "grounding_failure",
+      "dimension": "status",
+      "condition": "status == \"success\"",
+      "observation": "2 个 grounding_failure 案例中，2 个案例的 status = success，占该失败类型样本的 100%。",
+      "hypothesis": "status = success 可能与 grounding_failure 的发生存在关联。",
+      "pattern_detected": false,
+      "sample_size": 2,
+      "pattern_rate": 1.0,
+      "evidence_strength": "weak",
+      "status": "unverified"
+    }
+  ],
+  "warnings": [
+    "部分 Hypothesis 基于未通过 Pattern 样本量筛选的观察结果，仅属于探索性假设。",
+    "Hypothesis 仅表示待验证命题，不能直接视为因果关系或 Agent 优化依据。",
+    "真实 Evaluation 数据未被修改；后续验证应通过新的 Experiment 数据完成。"
+  ]
+}

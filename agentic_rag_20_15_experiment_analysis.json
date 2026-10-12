@@ -1,0 +1,52 @@
+{
+    "evaluation_stage": "20.15",
+    "evaluation_name": "Experiment Result Analysis",
+    "summary": {
+        "total_experiments": 3,
+        "supported": 0,
+        "rejected": 2,
+        "inconclusive": 0,
+        "not_experimentable": 1
+    },
+    "experiments": [
+        {
+            "experiment_id": "E001",
+            "hypothesis_id": "H001",
+            "experimentability": "controllable",
+            "metric": "grounding_failure_rate",
+            "control_value": 0.0,
+            "treatment_value": 0.0,
+            "difference": 0.0,
+            "expected_direction": "treatment grounding_failure_rate > control grounding_failure_rate",
+            "rejected_direction": "treatment grounding_failure_rate <= control grounding_failure_rate",
+            "observed_direction": "treatment == control",
+            "result": "rejected"
+        },
+        {
+            "experiment_id": "E002",
+            "hypothesis_id": "H002",
+            "experimentability": "controllable",
+            "metric": "grounding_failure_rate",
+            "control_value": 0.0,
+            "treatment_value": 0.0,
+            "difference": 0.0,
+            "expected_direction": "treatment grounding_failure_rate > control grounding_failure_rate",
+            "rejected_direction": "treatment grounding_failure_rate <= control grounding_failure_rate",
+            "observed_direction": "treatment == control",
+            "result": "rejected"
+        },
+        {
+            "experiment_id": "E003",
+            "hypothesis_id": "H003",
+            "experimentability": "not_directly_controllable",
+            "metric": null,
+            "control_value": null,
+            "treatment_value": null,
+            "difference": null,
+            "expected_direction": null,
+            "rejected_direction": null,
+            "observed_direction": null,
+            "result": "not_experimentable"
+        }
+    ]
+}

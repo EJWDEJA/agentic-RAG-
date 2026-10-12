@@ -1,0 +1,177 @@
+{
+    "case_results": [
+        {
+            "id": "case_01",
+            "question": "王建国的研究方向是什么",
+            "expected_answer": "王建国的研究方向是大数据分析、分布式系统。",
+            "actual_answer": "王建国的研究方向是大数据分析、分布式系统。",
+            "similarity": 0.9993879888770721,
+            "gold_label": true,
+            "status": "success",
+            "evidence_sufficient": true,
+            "citation_valid": true,
+            "retrieval_count": 1,
+            "repair_count": 0,
+            "trace": [
+                {
+                    "step": 1,
+                    "event": "retrieval",
+                    "detail": "第 1 次 Retrieval，Query=王建国的研究方向是什么"
+                },
+                {
+                    "step": 2,
+                    "event": "evidence_evaluation",
+                    "detail": "Evidence sufficient"
+                },
+                {
+                    "step": 3,
+                    "event": "grounding",
+                    "detail": "Evidence 足够，生成 Grounded Answer"
+                },
+                {
+                    "step": 4,
+                    "event": "citation_validation",
+                    "detail": "PASS"
+                }
+            ]
+        },
+        {
+            "id": "case_02",
+            "question": "王建国的职称是什么？",
+            "expected_answer": "王建国的职称是教授/博导。",
+            "actual_answer": "王建国的职称是教授/博导。",
+            "similarity": 0.999629176268102,
+            "gold_label": false,
+            "status": "success",
+            "evidence_sufficient": true,
+            "citation_valid": true,
+            "retrieval_count": 1,
+            "repair_count": 0,
+            "trace": [
+                {
+                    "step": 1,
+                    "event": "retrieval",
+                    "detail": "第 1 次 Retrieval，Query=王建国的职称是什么？"
+                },
+                {
+                    "step": 2,
+                    "event": "evidence_evaluation",
+                    "detail": "Evidence sufficient"
+                },
+                {
+                    "step": 3,
+                    "event": "grounding",
+                    "detail": "Evidence 足够，生成 Grounded Answer"
+                },
+                {
+                    "step": 4,
+                    "event": "citation_validation",
+                    "detail": "PASS"
+                }
+            ]
+        },
+        {
+            "id": "case_03",
+            "question": "赵雪丽的研究方向是什么？",
+            "expected_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP",
+            "actual_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP。",
+            "similarity": 0.9697548886063752,
+            "gold_label": false,
+            "status": "success",
+            "evidence_sufficient": true,
+            "citation_valid": true,
+            "retrieval_count": 1,
+            "repair_count": 0,
+            "trace": [
+                {
+                    "step": 1,
+                    "event": "retrieval",
+                    "detail": "第 1 次 Retrieval，Query=赵雪丽的研究方向是什么？"
+                },
+                {
+                    "step": 2,
+                    "event": "evidence_evaluation",
+                    "detail": "Evidence sufficient"
+                },
+                {
+                    "step": 3,
+                    "event": "grounding",
+                    "detail": "Evidence 足够，生成 Grounded Answer"
+                },
+                {
+                    "step": 4,
+                    "event": "citation_validation",
+                    "detail": "PASS"
+                }
+            ]
+        }
+    ],
+    "calibration": [
+        {
+            "threshold": 0.7,
+            "tp": 1,
+            "tn": 0,
+            "fp": 2,
+            "fn": 0,
+            "accuracy": 0.3333333333333333,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+        },
+        {
+            "threshold": 0.75,
+            "tp": 1,
+            "tn": 0,
+            "fp": 2,
+            "fn": 0,
+            "accuracy": 0.3333333333333333,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+        },
+        {
+            "threshold": 0.8,
+            "tp": 1,
+            "tn": 0,
+            "fp": 2,
+            "fn": 0,
+            "accuracy": 0.3333333333333333,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+        },
+        {
+            "threshold": 0.85,
+            "tp": 1,
+            "tn": 0,
+            "fp": 2,
+            "fn": 0,
+            "accuracy": 0.3333333333333333,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+        },
+        {
+            "threshold": 0.9,
+            "tp": 1,
+            "tn": 0,
+            "fp": 2,
+            "fn": 0,
+            "accuracy": 0.3333333333333333,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+        },
+        {
+            "threshold": 0.95,
+            "tp": 1,
+            "tn": 0,
+            "fp": 2,
+            "fn": 0,
+            "accuracy": 0.3333333333333333,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+        }
+    ]
+}

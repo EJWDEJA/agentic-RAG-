@@ -1,0 +1,97 @@
+{
+  "evaluation_stage": "20.11",
+  "evaluation_name": "Failure Pattern Analysis",
+  "summary": {
+    "total_cases": 3,
+    "failed_cases": 2,
+    "failure_rate": 0.6666666666666666
+  },
+  "failure_distribution": {
+    "grounding_failure": {
+      "count": 2,
+      "rate": 1.0
+    }
+  },
+  "behavioral_analysis": {
+    "by_failure_type": {
+      "grounding_failure": {
+        "sample_size": 2,
+        "retrieval_count": {
+          "1": 2
+        },
+        "repair_count": {
+          "0": 2
+        },
+        "status": {
+          "success": 2
+        }
+      }
+    },
+    "by_behavior": {
+      "retrieval_count": {
+        "1": {
+          "total": 3,
+          "outcomes": {
+            "grounding_failure": 2,
+            "success": 1
+          }
+        }
+      },
+      "repair_count": {
+        "0": {
+          "total": 3,
+          "outcomes": {
+            "grounding_failure": 2,
+            "success": 1
+          }
+        }
+      },
+      "status": {
+        "success": {
+          "total": 3,
+          "outcomes": {
+            "grounding_failure": 2,
+            "success": 1
+          }
+        }
+      }
+    }
+  },
+  "patterns": [
+    {
+      "failure_type": "grounding_failure",
+      "dimension": "retrieval_count",
+      "value": 1,
+      "count": 2,
+      "rate": 1.0,
+      "sample_size": 2,
+      "pattern_detected": false,
+      "sample_size_warning": true
+    },
+    {
+      "failure_type": "grounding_failure",
+      "dimension": "repair_count",
+      "value": 0,
+      "count": 2,
+      "rate": 1.0,
+      "sample_size": 2,
+      "pattern_detected": false,
+      "sample_size_warning": true
+    },
+    {
+      "failure_type": "grounding_failure",
+      "dimension": "status",
+      "value": "success",
+      "count": 2,
+      "rate": 1.0,
+      "sample_size": 2,
+      "pattern_detected": false,
+      "sample_size_warning": true
+    }
+  ],
+  "warnings": [
+    "Total sample size is too small for strong empirical conclusions.",
+    "Observed patterns should not be interpreted as causal relationships.",
+    "Some failure patterns have insufficient sample size."
+  ]
+}

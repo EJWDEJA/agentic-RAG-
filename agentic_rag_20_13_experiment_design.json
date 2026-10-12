@@ -1,0 +1,117 @@
+{
+  "evaluation_stage": "20.13",
+  "evaluation_name": "Experiment Design",
+  "summary": {
+    "total_hypotheses": 3,
+    "designed_experiments": 2,
+    "not_experimentable": 1,
+    "not_informative": 0
+  },
+  "experiments": [
+    {
+      "experiment_id": "E001",
+      "hypothesis_id": "H001",
+      "experimentability": "controllable",
+      "objective": "验证 retrieval_count=1 这一运行行为是否与 grounding_failure 的发生率存在关联。",
+      "variable": {
+        "name": "retrieval_limit",
+        "observed_dimension": "retrieval_count",
+        "observed_value": 1,
+        "control_value": 3,
+        "treatment_value": 1,
+        "informative": true
+      },
+      "control": {
+        "description": "使用当前正常 Agent Runtime 配置。",
+        "intervention_variable": "retrieval_limit",
+        "value": 3
+      },
+      "treatment": {
+        "description": "仅修改实验变量，其余 Agent 配置保持不变。",
+        "intervention_variable": "retrieval_limit",
+        "value": 1
+      },
+      "metric": {
+        "name": "grounding_failure_rate",
+        "formula": "grounding_failure_cases / total_cases",
+        "direction": "lower_is_better"
+      },
+      "dataset": {
+        "type": "fixed",
+        "same_for_control_and_treatment": true,
+        "description": "Control 与 Treatment 必须使用完全相同的问题集合。"
+      },
+      "constraints": [
+        "question dataset must remain unchanged",
+        "LLM configuration must remain unchanged",
+        "embedding configuration must remain unchanged",
+        "retrieval pipeline must remain unchanged",
+        "reranker configuration must remain unchanged",
+        "answer generation configuration must remain unchanged",
+        "evaluation criteria must remain unchanged",
+        "only retrieval_limit may change"
+      ],
+      "expected_outcome": {
+        "if_hypothesis_supported": "treatment grounding_failure_rate > control grounding_failure_rate",
+        "if_hypothesis_rejected": "treatment grounding_failure_rate <= control grounding_failure_rate"
+      },
+      "status": "designed"
+    },
+    {
+      "experiment_id": "E002",
+      "hypothesis_id": "H002",
+      "experimentability": "controllable",
+      "objective": "验证 repair_count=0 这一运行行为是否与 grounding_failure 的发生率存在关联。",
+      "variable": {
+        "name": "repair_limit",
+        "observed_dimension": "repair_count",
+        "observed_value": 0,
+        "control_value": 2,
+        "treatment_value": 0,
+        "informative": true
+      },
+      "control": {
+        "description": "使用当前正常 Agent Runtime 配置。",
+        "intervention_variable": "repair_limit",
+        "value": 2
+      },
+      "treatment": {
+        "description": "仅修改实验变量，其余 Agent 配置保持不变。",
+        "intervention_variable": "repair_limit",
+        "value": 0
+      },
+      "metric": {
+        "name": "grounding_failure_rate",
+        "formula": "grounding_failure_cases / total_cases",
+        "direction": "lower_is_better"
+      },
+      "dataset": {
+        "type": "fixed",
+        "same_for_control_and_treatment": true,
+        "description": "Control 与 Treatment 必须使用完全相同的问题集合。"
+      },
+      "constraints": [
+        "question dataset must remain unchanged",
+        "LLM configuration must remain unchanged",
+        "embedding configuration must remain unchanged",
+        "retrieval pipeline must remain unchanged",
+        "reranker configuration must remain unchanged",
+        "answer generation configuration must remain unchanged",
+        "evaluation criteria must remain unchanged",
+        "only repair_limit may change"
+      ],
+      "expected_outcome": {
+        "if_hypothesis_supported": "treatment grounding_failure_rate > control grounding_failure_rate",
+        "if_hypothesis_rejected": "treatment grounding_failure_rate <= control grounding_failure_rate"
+      },
+      "status": "designed"
+    },
+    {
+      "experiment_id": "E003",
+      "hypothesis_id": "H003",
+      "experimentability": "not_directly_controllable",
+      "status": "not_experimentable",
+      "reason": "status 是 Runtime 的观察结果，当前没有对应的直接 Intervention Variable。"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "evaluation_stage": "20.8",
+  "evaluation_name": "Multi-dimensional Evaluation",
+  "summary": {
+    "total": 3,
+    "answer_correctness": 0.3333333333333333,
+    "evidence_sufficiency": 1.0,
+    "citation_validity": 1.0,
+    "safe_fallback_rate": 0.0,
+    "retrieval_failure_rate": 0.0,
+    "average_retrieval_count": 1.0,
+    "repair_rate": 0.0,
+    "average_repair_count": 0.0
+  },
+  "cases": [
+    {
+      "case_id": "case_01",
+      "answer_correct": true,
+      "evidence_sufficient": true,
+      "citation_valid": true,
+      "retrieval_count": 1,
+      "repair_count": 0,
+      "status": "success",
+      "reason": "实际答案与期望答案的研究方向完全一致，均为大数据分析和分布式系统。"
+    },
+    {
+      "case_id": "case_02",
+      "answer_correct": false,
+      "evidence_sufficient": true,
+      "citation_valid": true,
+      "retrieval_count": 1,
+      "repair_count": 0,
+      "status": "success",
+      "reason": "实际答案与期望答案完全一致，正确回答了王建国的职称。"
+    },
+    {
+      "case_id": "case_03",
+      "answer_correct": false,
+      "evidence_sufficient": true,
+      "citation_valid": true,
+      "retrieval_count": 1,
+      "repair_count": 0,
+      "status": "success",
+      "reason": "实际答案与期望答案完全一致，正确回答了赵雪丽的研究方向。"
+    }
+  ]
+}

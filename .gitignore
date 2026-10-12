@@ -1,0 +1,50 @@
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# Local knowledge base and private data
+knowledge/
+documents.pkl
+*.pkl
+
+# Chroma persistent databases
+chroma_db/
+chroma_db_*/
+**/chroma_db/
+**/chroma_db_*/
+
+# Model weights and caches
+models/
+model/
+.cache/
+huggingface/
+transformers_cache/
+
+# Logs and temporary files
+*.log
+logs/
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Local scratch files
+/xx.py
+/python
+/新建 Python 源文件.py
+/expansion（由于多种问法生成用于大型知识库暂时搁置）.py

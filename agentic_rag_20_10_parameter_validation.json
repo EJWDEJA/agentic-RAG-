@@ -1,0 +1,28 @@
+{
+    "parameter_valid": true,
+    "total_cases": 3,
+    "valid_cases": 3,
+    "invalid_cases": 0,
+    "runtime_limits": {
+        "MAX_RETRIEVALS": 3,
+        "MAX_ANSWER_REPAIRS": 2
+    },
+    "case_results": [
+        {
+            "case_id": "case_01",
+            "valid": true,
+            "violations": []
+        },
+        {
+            "case_id": "case_02",
+            "valid": true,
+            "violations": []
+        },
+        {
+            "case_id": "case_03",
+            "valid": true,
+            "violations": []
+        }
+    ],
+    "violations": []
+}

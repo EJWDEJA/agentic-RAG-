@@ -1,0 +1,739 @@
+{
+    "evaluation_stage": "20.14",
+    "evaluation_name": "Experiment Execution",
+    "summary": {
+        "designed_experiments": 2,
+        "executed_experiments": 2,
+        "dataset_cases": 3
+    },
+    "experiments": [
+        {
+            "experiment_id": "E001",
+            "hypothesis_id": "H001",
+            "intervention_variable": "retrieval_limit",
+            "control_value": 3,
+            "treatment_value": 1,
+            "metric": {
+                "name": "grounding_failure_rate",
+                "formula": "grounding_failure_cases / total_cases",
+                "direction": "lower_is_better"
+            },
+            "control": {
+                "results": [
+                    {
+                        "case_id": "case_01",
+                        "question": "王建国的研究方向是什么",
+                        "expected_answer": "王建国的研究方向是大数据分析、分布式系统。",
+                        "actual_answer": "王建国的研究方向是：大数据分析、分布式系统。",
+                        "answer_correct": true,
+                        "llm_reason": "实际答案与期望答案一致，均指出王建国的研究方向是大数据分析和分布式系统。",
+                        "evidence_sufficient": true,
+                        "citation_valid": true,
+                        "retrieval_count": 1,
+                        "repair_count": 0,
+                        "status": "success",
+                        "evidence_ids": [
+                            "教职工与教辅人员信息表.xlsx|教职工与教辅人员信息|37"
+                        ],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的研究方向是什么"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence sufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "grounding",
+                                "detail": "Evidence 足够，生成 Grounded Answer"
+                            },
+                            {
+                                "step": 4,
+                                "event": "citation_validation",
+                                "detail": "PASS"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_02",
+                        "question": "王建国的职称是什么？",
+                        "expected_answer": "王建国的职称是教授/博导。",
+                        "actual_answer": "教授/博导",
+                        "answer_correct": true,
+                        "llm_reason": "实际答案与期望答案一致，均为教授/博导。",
+                        "evidence_sufficient": true,
+                        "citation_valid": true,
+                        "retrieval_count": 1,
+                        "repair_count": 0,
+                        "status": "success",
+                        "evidence_ids": [
+                            "教职工与教辅人员信息表.xlsx|教职工与教辅人员信息|37"
+                        ],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的职称是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence sufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "grounding",
+                                "detail": "Evidence 足够，生成 Grounded Answer"
+                            },
+                            {
+                                "step": 4,
+                                "event": "citation_validation",
+                                "detail": "PASS"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_03",
+                        "question": "赵雪丽的研究方向是什么？",
+                        "expected_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP",
+                        "actual_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP。",
+                        "answer_correct": true,
+                        "llm_reason": "实际答案与期望答案完全一致，正确回答了赵雪丽的研究方向。",
+                        "evidence_sufficient": true,
+                        "citation_valid": true,
+                        "retrieval_count": 1,
+                        "repair_count": 0,
+                        "status": "success",
+                        "evidence_ids": [
+                            "教职工与教辅人员信息表.xlsx|教职工与教辅人员信息|38"
+                        ],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=赵雪丽的研究方向是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence sufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "grounding",
+                                "detail": "Evidence 足够，生成 Grounded Answer"
+                            },
+                            {
+                                "step": 4,
+                                "event": "citation_validation",
+                                "detail": "PASS"
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "total_cases": 3,
+                    "grounding_failure_cases": 0,
+                    "grounding_failure_rate": 0.0
+                }
+            },
+            "treatment": {
+                "results": [
+                    {
+                        "case_id": "case_01",
+                        "question": "王建国的研究方向是什么",
+                        "expected_answer": "王建国的研究方向是大数据分析、分布式系统。",
+                        "actual_answer": "王建国的研究方向是：大数据分析、分布式系统。",
+                        "answer_correct": true,
+                        "llm_reason": "实际答案与期望答案一致，均指出王建国的研究方向是大数据分析、分布式系统。",
+                        "evidence_sufficient": true,
+                        "citation_valid": true,
+                        "retrieval_count": 1,
+                        "repair_count": 0,
+                        "status": "success",
+                        "evidence_ids": [
+                            "教职工与教辅人员信息表.xlsx|教职工与教辅人员信息|37"
+                        ],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的研究方向是什么"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence sufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "grounding",
+                                "detail": "Evidence 足够，生成 Grounded Answer"
+                            },
+                            {
+                                "step": 4,
+                                "event": "citation_validation",
+                                "detail": "PASS"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_02",
+                        "question": "王建国的职称是什么？",
+                        "expected_answer": "王建国的职称是教授/博导。",
+                        "actual_answer": "王建国的职称是教授/博导。",
+                        "answer_correct": true,
+                        "llm_reason": "实际答案与期望答案完全一致，正确回答了王建国的职称。",
+                        "evidence_sufficient": true,
+                        "citation_valid": true,
+                        "retrieval_count": 1,
+                        "repair_count": 0,
+                        "status": "success",
+                        "evidence_ids": [
+                            "教职工与教辅人员信息表.xlsx|教职工与教辅人员信息|37"
+                        ],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的职称是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence sufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "grounding",
+                                "detail": "Evidence 足够，生成 Grounded Answer"
+                            },
+                            {
+                                "step": 4,
+                                "event": "citation_validation",
+                                "detail": "PASS"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_03",
+                        "question": "赵雪丽的研究方向是什么？",
+                        "expected_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP",
+                        "actual_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP。",
+                        "answer_correct": true,
+                        "llm_reason": "实际答案与期望答案完全一致，正确回答了赵雪丽的研究方向。",
+                        "evidence_sufficient": true,
+                        "citation_valid": true,
+                        "retrieval_count": 1,
+                        "repair_count": 0,
+                        "status": "success",
+                        "evidence_ids": [
+                            "教职工与教辅人员信息表.xlsx|教职工与教辅人员信息|38"
+                        ],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=赵雪丽的研究方向是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence sufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "grounding",
+                                "detail": "Evidence 足够，生成 Grounded Answer"
+                            },
+                            {
+                                "step": 4,
+                                "event": "citation_validation",
+                                "detail": "PASS"
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "total_cases": 3,
+                    "grounding_failure_cases": 0,
+                    "grounding_failure_rate": 0.0
+                }
+            },
+            "comparison": {
+                "control_grounding_failure_rate": 0.0,
+                "treatment_grounding_failure_rate": 0.0,
+                "difference": 0.0
+            },
+            "hypothesis_result": "rejected",
+            "status": "executed"
+        },
+        {
+            "experiment_id": "E002",
+            "hypothesis_id": "H002",
+            "intervention_variable": "repair_limit",
+            "control_value": 2,
+            "treatment_value": 0,
+            "metric": {
+                "name": "grounding_failure_rate",
+                "formula": "grounding_failure_cases / total_cases",
+                "direction": "lower_is_better"
+            },
+            "control": {
+                "results": [
+                    {
+                        "case_id": "case_01",
+                        "question": "王建国的研究方向是什么",
+                        "expected_answer": "王建国的研究方向是大数据分析、分布式系统。",
+                        "actual_answer": "",
+                        "answer_correct": false,
+                        "llm_reason": "实际答案为空，未提供王建国的研究方向。",
+                        "evidence_sufficient": false,
+                        "citation_valid": null,
+                        "retrieval_count": 3,
+                        "repair_count": 0,
+                        "status": "unknown",
+                        "evidence_ids": [],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的研究方向是什么"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的研究方向']"
+                            },
+                            {
+                                "step": 4,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 研究方向"
+                            },
+                            {
+                                "step": 5,
+                                "event": "retrieval",
+                                "detail": "第 2 次 Retrieval，Query=王建国 研究方向"
+                            },
+                            {
+                                "step": 6,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 7,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的研究方向']"
+                            },
+                            {
+                                "step": 8,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 研究方向"
+                            },
+                            {
+                                "step": 9,
+                                "event": "retrieval",
+                                "detail": "第 3 次 Retrieval，Query=王建国 研究方向"
+                            },
+                            {
+                                "step": 10,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 11,
+                                "event": "retrieval_failure",
+                                "detail": "达到 Retrieval Budget 后 Evidence 仍然不足"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_02",
+                        "question": "王建国的职称是什么？",
+                        "expected_answer": "王建国的职称是教授/博导。",
+                        "actual_answer": "",
+                        "answer_correct": false,
+                        "llm_reason": "实际答案为空，未提供王建国的职称信息，未回答问题。",
+                        "evidence_sufficient": false,
+                        "citation_valid": null,
+                        "retrieval_count": 3,
+                        "repair_count": 0,
+                        "status": "unknown",
+                        "evidence_ids": [],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的职称是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的职称/职级信息']"
+                            },
+                            {
+                                "step": 4,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 职称"
+                            },
+                            {
+                                "step": 5,
+                                "event": "retrieval",
+                                "detail": "第 2 次 Retrieval，Query=王建国 职称"
+                            },
+                            {
+                                "step": 6,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 7,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的职称']"
+                            },
+                            {
+                                "step": 8,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 职称"
+                            },
+                            {
+                                "step": 9,
+                                "event": "retrieval",
+                                "detail": "第 3 次 Retrieval，Query=王建国 职称"
+                            },
+                            {
+                                "step": 10,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 11,
+                                "event": "retrieval_failure",
+                                "detail": "达到 Retrieval Budget 后 Evidence 仍然不足"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_03",
+                        "question": "赵雪丽的研究方向是什么？",
+                        "expected_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP",
+                        "actual_answer": "",
+                        "answer_correct": false,
+                        "llm_reason": "实际答案为空，未回答赵雪丽的研究方向。",
+                        "evidence_sufficient": false,
+                        "citation_valid": null,
+                        "retrieval_count": 3,
+                        "repair_count": 0,
+                        "status": "unknown",
+                        "evidence_ids": [],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=赵雪丽的研究方向是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "evidence_gap",
+                                "detail": "['赵雪丽的研究方向']"
+                            },
+                            {
+                                "step": 4,
+                                "event": "targeted_retrieval",
+                                "detail": "赵雪丽 研究方向"
+                            },
+                            {
+                                "step": 5,
+                                "event": "retrieval",
+                                "detail": "第 2 次 Retrieval，Query=赵雪丽 研究方向"
+                            },
+                            {
+                                "step": 6,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 7,
+                                "event": "evidence_gap",
+                                "detail": "['赵雪丽在教职工与教辅人员信息表中的档案记录', '赵雪丽的研究方向']"
+                            },
+                            {
+                                "step": 8,
+                                "event": "targeted_retrieval",
+                                "detail": "赵雪丽 研究方向 教职工 教辅人员 信息表"
+                            },
+                            {
+                                "step": 9,
+                                "event": "retrieval",
+                                "detail": "第 3 次 Retrieval，Query=赵雪丽 研究方向 教职工 教辅人员 信息表"
+                            },
+                            {
+                                "step": 10,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 11,
+                                "event": "retrieval_failure",
+                                "detail": "达到 Retrieval Budget 后 Evidence 仍然不足"
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "total_cases": 3,
+                    "grounding_failure_cases": 0,
+                    "grounding_failure_rate": 0.0
+                }
+            },
+            "treatment": {
+                "results": [
+                    {
+                        "case_id": "case_01",
+                        "question": "王建国的研究方向是什么",
+                        "expected_answer": "王建国的研究方向是大数据分析、分布式系统。",
+                        "actual_answer": "",
+                        "answer_correct": false,
+                        "llm_reason": "实际答案为空，未提供王建国的研究方向。",
+                        "evidence_sufficient": false,
+                        "citation_valid": null,
+                        "retrieval_count": 3,
+                        "repair_count": 0,
+                        "status": "unknown",
+                        "evidence_ids": [],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的研究方向是什么"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的研究方向']"
+                            },
+                            {
+                                "step": 4,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国研究方向"
+                            },
+                            {
+                                "step": 5,
+                                "event": "retrieval",
+                                "detail": "第 2 次 Retrieval，Query=王建国研究方向"
+                            },
+                            {
+                                "step": 6,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 7,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的研究方向']"
+                            },
+                            {
+                                "step": 8,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 研究方向"
+                            },
+                            {
+                                "step": 9,
+                                "event": "retrieval",
+                                "detail": "第 3 次 Retrieval，Query=王建国 研究方向"
+                            },
+                            {
+                                "step": 10,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 11,
+                                "event": "retrieval_failure",
+                                "detail": "达到 Retrieval Budget 后 Evidence 仍然不足"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_02",
+                        "question": "王建国的职称是什么？",
+                        "expected_answer": "王建国的职称是教授/博导。",
+                        "actual_answer": "",
+                        "answer_correct": false,
+                        "llm_reason": "实际答案为空，未回答问题，也没有提供王建国的职称信息。",
+                        "evidence_sufficient": false,
+                        "citation_valid": null,
+                        "retrieval_count": 3,
+                        "repair_count": 0,
+                        "status": "unknown",
+                        "evidence_ids": [],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=王建国的职称是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的职称信息']"
+                            },
+                            {
+                                "step": 4,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 职称"
+                            },
+                            {
+                                "step": 5,
+                                "event": "retrieval",
+                                "detail": "第 2 次 Retrieval，Query=王建国 职称"
+                            },
+                            {
+                                "step": 6,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 7,
+                                "event": "evidence_gap",
+                                "detail": "['王建国的职称信息']"
+                            },
+                            {
+                                "step": 8,
+                                "event": "targeted_retrieval",
+                                "detail": "王建国 职称"
+                            },
+                            {
+                                "step": 9,
+                                "event": "retrieval",
+                                "detail": "第 3 次 Retrieval，Query=王建国 职称"
+                            },
+                            {
+                                "step": 10,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 11,
+                                "event": "retrieval_failure",
+                                "detail": "达到 Retrieval Budget 后 Evidence 仍然不足"
+                            }
+                        ]
+                    },
+                    {
+                        "case_id": "case_03",
+                        "question": "赵雪丽的研究方向是什么？",
+                        "expected_answer": "赵雪丽的研究方向是大模型与RAG应用、NLP",
+                        "actual_answer": "",
+                        "answer_correct": false,
+                        "llm_reason": "实际答案为空，未回答赵雪丽的研究方向。",
+                        "evidence_sufficient": false,
+                        "citation_valid": null,
+                        "retrieval_count": 3,
+                        "repair_count": 0,
+                        "status": "unknown",
+                        "evidence_ids": [],
+                        "trace": [
+                            {
+                                "step": 1,
+                                "event": "retrieval",
+                                "detail": "第 1 次 Retrieval，Query=赵雪丽的研究方向是什么？"
+                            },
+                            {
+                                "step": 2,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 3,
+                                "event": "evidence_gap",
+                                "detail": "['赵雪丽的研究方向']"
+                            },
+                            {
+                                "step": 4,
+                                "event": "targeted_retrieval",
+                                "detail": "赵雪丽研究方向"
+                            },
+                            {
+                                "step": 5,
+                                "event": "retrieval",
+                                "detail": "第 2 次 Retrieval，Query=赵雪丽研究方向"
+                            },
+                            {
+                                "step": 6,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 7,
+                                "event": "evidence_gap",
+                                "detail": "['赵雪丽在《教职工与教辅人员信息表》中的档案记录', '赵雪丽的“研究方向/教学领域”字段内容']"
+                            },
+                            {
+                                "step": 8,
+                                "event": "targeted_retrieval",
+                                "detail": "赵雪丽 研究方向 教职工与教辅人员信息表"
+                            },
+                            {
+                                "step": 9,
+                                "event": "retrieval",
+                                "detail": "第 3 次 Retrieval，Query=赵雪丽 研究方向 教职工与教辅人员信息表"
+                            },
+                            {
+                                "step": 10,
+                                "event": "evidence_evaluation",
+                                "detail": "Evidence insufficient"
+                            },
+                            {
+                                "step": 11,
+                                "event": "retrieval_failure",
+                                "detail": "达到 Retrieval Budget 后 Evidence 仍然不足"
+                            }
+                        ]
+                    }
+                ],
+                "metrics": {
+                    "total_cases": 3,
+                    "grounding_failure_cases": 0,
+                    "grounding_failure_rate": 0.0
+                }
+            },
+            "comparison": {
+                "control_grounding_failure_rate": 0.0,
+                "treatment_grounding_failure_rate": 0.0,
+                "difference": 0.0
+            },
+            "hypothesis_result": "rejected",
+            "status": "executed"
+        }
+    ]
+}

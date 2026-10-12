@@ -1,0 +1,40 @@
+{
+    "total_cases": 3,
+    "failed_cases": 2,
+    "failure_counts": {
+        "evidence_failure": 0,
+        "repair_failure": 0,
+        "grounding_failure": 2,
+        "unknown_failure": 0
+    },
+    "failure_rates": {
+        "evidence_failure": 0.0,
+        "repair_failure": 0.0,
+        "grounding_failure": 1.0,
+        "unknown_failure": 0.0
+    },
+    "failure_cases": [
+        {
+            "case_id": "case_02",
+            "failure_type": "grounding_failure",
+            "answer_correct": false,
+            "evidence_sufficient": true,
+            "citation_valid": true,
+            "retrieval_count": 1,
+            "repair_count": 0,
+            "status": "success",
+            "reason": "实际答案与期望答案完全一致，正确回答了王建国的职称。"
+        },
+        {
+            "case_id": "case_03",
+            "failure_type": "grounding_failure",
+            "answer_correct": false,
+            "evidence_sufficient": true,
+            "citation_valid": true,
+            "retrieval_count": 1,
+            "repair_count": 0,
+            "status": "success",
+            "reason": "实际答案与期望答案完全一致，正确回答了赵雪丽的研究方向。"
+        }
+    ]
+}
